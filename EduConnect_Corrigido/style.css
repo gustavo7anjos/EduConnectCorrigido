@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f5f7; color: #232a31; }
+.cabecalho { background: #30223e; color: white; padding: 26px 0; }
+.conteudo-cabecalho { width: min(1100px, calc(100% - 32px)); margin: auto; }
+.cabecalho h1 { margin: 0 0 6px; }
+.cabecalho p { margin: 0; color: #e7ddee; }
+.painel { width: min(1100px, calc(100% - 32px)); margin: 30px auto; display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 30px; }
+.cartao { min-width: 0; background: white; border: 1px solid #e1e4e7; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px #00000009; }
+.cartao h2 { margin-top: 0; font-size: 21px; }
+.cartao p { color: #68727d; }
+label { display: block; margin: 14px 0 6px; font-weight: 600; }
+input, select { width: 100%; padding: 11px; font-size: 15px; border: 1px solid #aeb8c2; border-radius: 6px; }
+:focus-visible { outline: 3px solid #9873bd; outline-offset: 2px; }
+.primario { width: 100%; margin-top: 18px; padding: 12px; background: #69428a; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; }
+.primario:hover { background: #54346f; }
+.linha-titulo { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+#total { color: #68727d; font-size: 13px; white-space: nowrap; }
+.lista { list-style: none; padding: 0; }
+.registro { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #edf0f2; }
+.registro > div { min-width: 0; overflow-wrap: anywhere; }
+.registro strong { display: block; margin-bottom: 3px; }
+.registro small { color: #65717c; display: block; margin-top: 2px; }
+.excluir { border: 1px solid #d9a4a4; background: #fff; color: #9d3434; padding: 8px; border-radius: 6px; cursor: pointer; flex-shrink: 0; }
+.excluir:hover { background: #fff1f1; }
+#aviso { min-height: 20px; overflow-wrap: anywhere; }
+footer { text-align: center; padding: 20px; color: #6c7175; }
+@media (max-width: 800px) { .painel { grid-template-columns: minmax(0, 1fr); gap: 18px; margin: 18px auto; } }
+@media (max-width: 480px) { .cartao { padding: 16px; } .registro { align-items: flex-start; } }

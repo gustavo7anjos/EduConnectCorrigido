@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnect | Cadastro de Interessados</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho"><div class="conteudo-cabecalho"><h1>EduConnect</h1><p>Gerenciamento de interessados em cursos</p></div></header>
+  <main class="painel">
+    <section class="cartao" aria-labelledby="titulo-cadastro">
+      <h2 id="titulo-cadastro">Novo interessado</h2>
+      <p>Preencha os campos para realizar o cadastro. Todos os campos são obrigatórios.</p>
+      <form id="form-cadastro">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" maxlength="120" autocomplete="name" placeholder="Ex.: Maria Silva" required>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="Ex.: maria@email.com" required>
+        <label for="curso">Curso de interesse</label>
+        <select id="curso" name="curso" required>
+          <option value="">Selecione um curso</option>
+          <option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
+          <option value="Enfermagem">Enfermagem</option>
+          <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+          <option value="Administração">Administração</option>
+        </select>
+        <button type="submit" class="primario">Cadastrar interessado</button>
+      </form>
+      <p id="aviso" role="status" aria-live="polite"></p>
+    </section>
+    <section class="cartao" aria-labelledby="titulo-lista">
+      <div class="linha-titulo"><h2 id="titulo-lista">Interessados cadastrados</h2><span id="total">0 registros</span></div>
+      <label for="busca">Pesquisar por nome</label>
+      <input id="busca" name="busca" type="search" placeholder="Digite o nome...">
+      <ul id="lista" class="lista"></ul>
+      <p id="vazio">Nenhum interessado encontrado.</p>
+    </section>
+  </main>
+  <footer>EduConnect • versão de avaliação</footer>
+</body>
+</html>
